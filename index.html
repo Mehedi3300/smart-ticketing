@@ -10,12 +10,16 @@
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <!-- font style -->
     <style>
     .font-raleway{
     font-family: "Raleway", sans-serif;
+    }
+
+    .font-inter{
+    font-family: "Inter", sans-serif;
     }
     </style>
 
@@ -289,9 +293,69 @@
 
                     <h3 class="font-semibold text-2xl border-b-2 border-dashed mt-10 pb-8">Select Your Seat</h3>
 
-                    <div>
-                        <h3></h3>
+                    <div class="flex justify-around font-medium mt-14 border-b-2 border-dashed pb-3">
+                        <h4>Seat <span class="bg-[#1DD100] px-2 rounded-xl">2</span></h4>
+                        <h4>Class</h4>
+                        <h4>Price</h4>
                     </div>
+
+                    <div class="flex justify-around font-inter mt-4">
+                        <p>C2</p>
+                        <p>Economy</p>
+                        <p>550</p>
+                    </div>
+                    <div class="flex justify-around font-inter mt-4">
+                        <p>C3</p>
+                        <p>Economy</p>
+                        <p>550</p>
+                    </div>
+
+                    <!-- total price -->
+                    <div class="flex justify-between mt-6 border-t-2 border-dashed pt-4 font-medium text-black font-inter">
+                        <p>Total Price</p>
+                        <p>BDT <span>1100</span></p>
+                    </div>
+
+                    <!-- coupon -->
+                    <label class="input input-bordered flex items-center gap-2 mt-8">
+                        <input type="text" class="grow" placeholder="Have any coupon?" />
+                        <button class="btn text-white bg-[#1DD100]">Apply</button>
+                    </label>
+                    <div class="flex justify-between mt-4 pt-4 font-medium text-black font-inter">
+                        <p>Grand Total</p>
+                        <p>BDT <span>1100</span></p>
+                    </div>
+
+                      <!-- input area -->
+                      <div class="mt-12">
+                        <div >
+                            <h2 class="font-semibold">Passenger Name*</h2>
+                            <label class="input input-bordered flex items-center gap-2 mt-3">
+                                <input type="text" class="grow" placeholder="Enter your name" />
+                            </label>    
+                        </div>
+
+                        <div class="mt-6">
+                            <h2 class="font-semibold">Phone Number*</h2>
+                            <label class="input input-bordered flex items-center gap-2 mt-3">
+                                <input type="text" class="grow" placeholder="Enter your phone number" />
+                            </label>    
+                        </div>
+
+                        <div class="mt-6">
+                            <h2 class="font-semibold">Email ID</h2>
+                            <label class="input input-bordered flex items-center gap-2 mt-3">
+                                <input type="text" class="grow" placeholder="Enter your email id" />
+                            </label>    
+                        </div>
+                      </div>
+
+                      <button class="btn w-full bg-[#1DD100] text-white mt-6" >Next</button>
+
+                      <div class="flex justify-center gap-10 text-[#030712] opacity-60 mt-4">
+                        <a href="" class="underline">Terms and Conditions</a>
+                        <a href="" class="underline">Cancellation Policy</a>
+                      </div>
                 </div>
             </div>
 
