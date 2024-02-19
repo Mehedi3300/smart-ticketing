@@ -55,16 +55,29 @@ for (let index = 0; index < keys.length; index++) {
 
 }
 
+
 document.getElementById("discount").addEventListener("blur", function (event) {
     const discountCode = this.value.trim();
     if (count===4) {
         let discount = 0  
         if (discountCode === "NEW15") {
           discount = 0.15 * parseInt(document.getElementById("total-price").innerText);
-          document.getElementById("discount-total").innerText = discount;
+          document.getElementById("discount-total").innerText = discount;           
+            //hide apply section
+            const applySection = document.getElementById('apply-section')
+            applySection.classList.add('hidden');
+            const discountSection = document.getElementById('discount-section');
+            discountSection.classList.remove('hidden');     
+                     
+          
         } else if (discountCode === "Couple20" && count >= 2) {
           discount = 0.2 * parseInt(document.getElementById("total-price").innerText);
           document.getElementById("discount-total").innerText = discount;
+          //hide apply section
+          const applySection = document.getElementById('apply-section')
+          applySection.classList.add('hidden');
+          const discountSection = document.getElementById('discount-section');
+          discountSection.classList.remove('hidden');
         } else {
           alert("Enter the correct discount code");
         }
@@ -78,8 +91,6 @@ document.getElementById("discount").addEventListener("blur", function (event) {
     }
   
   });
- 
-  
 
 const button = document.getElementById("next-btn");
 
