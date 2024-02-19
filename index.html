@@ -21,6 +21,19 @@
     .font-inter{
     font-family: "Inter", sans-serif;
     }
+    #buying-seat {
+        display: flex;
+        flex-direction: column;
+      }
+
+    #buying-seat li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+}  
     </style>
 
 </head>
@@ -166,7 +179,7 @@
                             <div>
                                 <a class="btn  lg:px-6 text-[#1DD100] bg-[#1cd1001f] border-[#1cd10063]"> 
                                     <img src="images/seat-gray.png" class="w-[20%]" alt="">
-                                    40 Seats left
+                                    <span id="seat-left" class="font-inter">40</span> Seats left
                                 </a>
                             </div>
                         </div>
@@ -299,7 +312,7 @@
 
 
                         <div class="text-[#030712] opacity-50 mt-[30px] flex flex-col gap-6 lg:ml-10 ml-4">
-                            <kbd class="kbd mb-[22px] "><img class="w-10 p-2" src="images/steering-wheel.png" alt=""></kbd>
+                            <kbd class="btn border-2 border-[#0307121A] mb-[22px] "><img class="w-10 p-2" src="images/steering-wheel.png" alt=""></kbd>
                             <kbd class="kbd px-6">A4</kbd>
                             <kbd class="kbd">B4</kbd>
                             <kbd class="kbd">C4</kbd>
@@ -322,36 +335,35 @@
                     <h3 class="font-semibold text-2xl border-b-2 border-dashed mt-10 pb-8">Select Your Seat</h3>
 
                     <div class="flex justify-around font-medium mt-14 border-b-2 border-dashed pb-3">
-                        <h4>Seat <span class="bg-[#1DD100] px-2 rounded-xl">2</span></h4>
+                        <h4>Seat <span id="seat-selected" class="bg-[#1DD100] px-2 rounded-xl">0</span></h4>
                         <h4>Class</h4>
                         <h4>Price</h4>
                     </div>
 
-                    <div class="flex justify-around font-inter mt-4">
-                        <p>C2</p>
+                    <div id="buying-seat" class="flex justify-around font-inter mt-4">
+                        <!-- <p>A1</p>
                         <p>Economy</p>
-                        <p>550</p>
-                    </div>
-                    <div class="flex justify-around font-inter mt-4">
-                        <p>C3</p>
-                        <p>Economy</p>
-                        <p>550</p>
+                        <p>550</p> -->
                     </div>
 
                     <!-- total price -->
-                    <div class="flex justify-between mt-6 border-t-2 border-dashed pt-4 font-medium text-black font-inter">
+                    <div class="flex justify-around gap-48 mt-6 border-t-2 border-dashed pt-4 font-medium text-black font-inter">
                         <p>Total Price</p>
-                        <p>BDT <span>1100</span></p>
+                        <p>BDT <span id="total-price">00</span></p>
                     </div>
 
                     <!-- coupon -->
                     <label class="input input-bordered flex items-center gap-2 mt-8">
-                        <input type="text" class="grow" placeholder="Have any coupon?" />
+                        <input id="discount" type="text" class="grow" placeholder="Have any coupon?" />
                         <button class="btn text-white bg-[#1DD100]">Apply</button>
                     </label>
                     <div class="flex justify-between mt-4 pt-4 font-medium text-black font-inter">
+                        <p>Total Discount</p>
+                        <p>BDT <span id="discount-total">00</span></p>
+                    </div>
+                    <div class="flex justify-between mt-4 pt-4 font-medium text-black font-inter">
                         <p>Grand Total</p>
-                        <p>BDT <span>1100</span></p>
+                        <p>BDT <span id="grand-total">00</span></p>
                     </div>
 
                       <!-- input area -->
@@ -359,26 +371,26 @@
                         <div >
                             <h2 class="font-semibold">Passenger Name*</h2>
                             <label class="input input-bordered flex items-center gap-2 mt-3">
-                                <input type="text" class="grow" placeholder="Enter your name" />
+                                <input id="name" type="text" class="grow" placeholder="Enter your name" />
                             </label>    
                         </div>
 
                         <div class="mt-6">
                             <h2 class="font-semibold">Phone Number*</h2>
                             <label class="input input-bordered flex items-center gap-2 mt-3">
-                                <input type="text" class="grow" placeholder="Enter your phone number" />
+                                <input id="phone" type="text" class="grow" placeholder="Enter your phone number" />
                             </label>    
                         </div>
 
                         <div class="mt-6">
                             <h2 class="font-semibold">Email ID</h2>
                             <label class="input input-bordered flex items-center gap-2 mt-3">
-                                <input type="text" class="grow" placeholder="Enter your email id" />
+                                <input id="mail" type="text" class="grow" placeholder="Enter your email id" />
                             </label>    
                         </div>
                       </div>
 
-                      <button class="btn w-full bg-[#1DD100] text-white mt-6" >Next</button>
+                      <button id="next-btn" class="  btn w-full bg-[#1DD100] text-white mt-6" >Next</button>
 
                       <div class="flex justify-center gap-10 text-[#030712] opacity-60 mt-4">
                         <a href="" class="underline">Terms and Conditions</a>
@@ -421,7 +433,9 @@
                 <a href="">Privacy policy</a>
             </div>
         </div>
-      </footer> 
+      </footer>
+      
+      <!-- js file -->
       <script src="scripts.js"></script> 
 </body>
 </html>
