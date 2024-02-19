@@ -37,9 +37,14 @@
                 </h3>
                 <h3 class="text-[#4A4A4A] font-light text-xl mt-3 mb-6">Shortly you will find a confirmation in your email.</h3>
             </div>
-            <button onclick="" class="btn bg-[#27AE60] text-white px-24 rounded-3xl">
+            <button onclick="" id="continue-btn" class="btn bg-[#27AE60] text-white px-24 rounded-3xl">
                 Continue</button>
         </div>
     </div>
+    <script>
+        document.getElementById('continue-btn').addEventListener('click', function(event) {
+            window.location.href = 'index.html';
+        });
+    </script>
 </body>
 </html>
